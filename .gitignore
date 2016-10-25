@@ -8,6 +8,7 @@
 **/*.bbl
 **/*.blg
 **/*.vrb
+**/*.beam
 **/erl_crash.dump
 **/rel
 **/_build
