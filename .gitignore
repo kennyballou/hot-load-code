@@ -1,0 +1,16 @@
+**/*.pdf
+**/*.nav
+**/*.log
+**/*.out
+**/*.toc
+**/*.snm
+**/*.aux
+**/*.bbl
+**/*.blg
+**/*.vrb
+**/erl_crash.dump
+**/rel
+**/_build
+**/deps
+**/.env
+**/out
