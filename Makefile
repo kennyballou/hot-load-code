@@ -8,3 +8,4 @@ all: hot-load-code.pdf
 .PHONY: clean
 clean:
 	@make -C src/tex $@
+	@rm -f hot-load-code.pdf
