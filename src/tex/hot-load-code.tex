@@ -40,7 +40,8 @@
 }
 
 \title{Hot Load Code}
-\subtitle{}
+\subtitle{Using Erlang/Elixir to Deploy Code \\{}
+without restarting}
 \author[Ballou]{Kenny Ballou}
 \institute[zData]{%
     \inst{}%
@@ -83,9 +84,39 @@
 
 \begin{frame}
 \frametitle{Hot Loading Code}
+\framesubtitle{Problem}
 \begin{itemize}
-\item{}
+\item{Deploying new code requires downtime}
+\item{Deployments are error prone}
+\begin{itemize}
+\item{Especially when achieved manually}
 \end{itemize}
+\item{Minimizing downtime can be expensive}
+\item{Automating deployments can be a herculean task}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hot Loading Code}
+Using Erlang/OTP, we can:
+\begin{itemize}
+\item{Load new versions of modules/processes}
+\item{Load new versions of application trees}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hot Loading Code}
+\framesubtitle{Problems with Hot Loading Code}
+\begin{itemize}
+\item{Hard to do right}
+\item{Difficult to test}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hot Loading Code}
+\Huge{DEMO}
 \end{frame}
 
 \section*{References}
