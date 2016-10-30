@@ -87,6 +87,7 @@ without restarting}
 \framesubtitle{Problem}
 \begin{itemize}
 \item{Deploying new code requires downtime}
+\item{Downtime can be exacerbated by cold boot problem}
 \item{Deployments are error prone}
 \begin{itemize}
 \item{Especially when achieved manually}
@@ -111,6 +112,29 @@ Using Erlang/OTP, we can:
 \begin{itemize}
 \item{Hard to do right}
 \item{Difficult to test}
+\end{itemize}
+\end{frame}
+
+\section{iex}
+
+\begin{frame}
+\frametitle{Manually Loading New Code}
+\framesubtitle{Black Magic}
+\begin{itemize}
+\item{\texttt{:sys.suspend/1}}
+\item{\texttt{:code.load\_file/1}}
+\item{\texttt{:sys.code\_change/4}}
+\item{\texttt{:sys.resume/1}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hot Loading Code}
+\framesubtitle{Using IEx}
+\begin{itemize}
+\item{\texttt{c/1} --- compile}
+\item{\texttt{l/1} --- load}
+\item{\texttt{r/1} --- (recompile and) reload}
 \end{itemize}
 \end{frame}
 
