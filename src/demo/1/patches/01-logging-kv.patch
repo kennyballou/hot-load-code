@@ -1,0 +1,27 @@
+diff --git a/src/demo/1/kv.ex b/src/demo/1/kv.ex
+index b37aead..03adc7e 100644
+--- a/src/demo/1/kv.ex
++++ b/src/demo/1/kv.ex
+@@ -1,7 +1,8 @@
+ defmodule KV do
++  require Logger
+   use GenServer
+ 
+-  @version 0
++  @version 1
+ 
+   def start_link() do
+     GenServer.start_link(__MODULE__, [], name: __MODULE__)
+@@ -20,10 +21,12 @@ defmodule KV do
+   end
+ 
+   def handle_call({:get, key, default}, _caller, state) do
++    Logger.info("#{__MODULE__}: Handling get request for #{key}")
+     {:reply, Map.get(state, key, default), state}
+   end
+ 
+   def handle_call({:put, key, value}, _caller, state) do
++    Logger.info("#{__MODULE__}: Handling put request for #{key}:#{value}")
+     {:reply, :ok, Map.put(state, key, value)}
+   end
+ 
