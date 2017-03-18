@@ -11,12 +11,14 @@ defmodule KV do
     {:ok, %{}}
   end
 
-  def get(key, default \\ nil) do
-    GenServer.call(__MODULE__, {:get, key, default})
+  def get(pid \\ __MODULE__, key, default \\ nil)
+  def get(pid, key, default) do
+    GenServer.call(pid, {:get, key, default})
   end
 
-  def put(key, value) do
-    GenServer.call(__MODULE__, {:put, key, value})
+  def put(pid \\ __MODULE__, key, value)
+  def put(pid, key, value) do
+    GenServer.call(pid, {:put, key, value})
   end
 
   def handle_call({:get, key, default}, _caller, state) do

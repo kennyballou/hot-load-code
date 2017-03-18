@@ -39,13 +39,13 @@
     tabsize=2
 }
 
-\title{Hot Load Code}
+\title{Hot Loading Code}
 \subtitle{Using Erlang/Elixir to Deploy Code \\{}
 without restarting}
 \author[Ballou]{Kenny Ballou}
-\institute[zData]{%
+\institute[/dev/null]{%
     \inst{}%
-    zData, Inc.
+    /dev/null > labs
 }
 
 \AtBeginSection[]{%
@@ -80,7 +80,21 @@ without restarting}
 \tableofcontents[subsectionstyle=hide]
 \end{frame}
 
-\section{Introduction}
+\begin{frame}
+\frametitle{About Me}
+\begin{itemize}
+\item{Hacker}
+\item{Developer (read gardener)}
+\item{Mathematician}
+\item{Student}
+\item{\href{https://twitter.com/kennyballou}{@kennyballou}}
+\item{\href{https://github.com}{github/kennyballou}}
+\item{\url{https://git.devnulllabs.io}}
+\item{\url{https://kennyballou.com}}
+\end{itemize}
+\end{frame}
+
+\section{Motivation}
 
 \begin{frame}
 \frametitle{Hot Loading Code}
@@ -93,7 +107,7 @@ without restarting}
 \item{Especially when achieved manually}
 \end{itemize}
 \item{Minimizing downtime can be expensive}
-\item{Automating deployments can be a herculean task}
+\item{Automating deployments \textit{can} be a herculean task}
 \end{itemize}
 \end{frame}
 
@@ -112,6 +126,15 @@ Using Erlang/OTP, we can:
 \begin{itemize}
 \item{Hard to do right}
 \item{Difficult to test}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Deployment Elsewhere}
+\begin{itemize}
+\item{Kubernetes\cite{website:kubernetes}}
+\item{``Rolling'' Releases}
+\item{Blue/Green\cite{website:bluegreendeployment_fowler}}
 \end{itemize}
 \end{frame}
 
@@ -184,10 +207,14 @@ Using Erlang/OTP, we can:
 \end{itemize}
 \item{\texttt{distillery}~\cite{website:bitwalker/distillery}}
 \begin{itemize}
-\item{Beta}
+\item{\sout{Beta} Stable}
 \item{Pure Elixir}
 \item{Better Umbrella Support}
 \item{Bugs}
+\begin{itemize}
+\item{Supervisors are (still) painful}
+\item{May require manual \texttt{.appup} writing}
+\end{itemize}
 \item{Future}
 \end{itemize}
 \end{itemize}
