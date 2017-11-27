@@ -85,7 +85,6 @@ without restarting}
 \begin{itemize}
 \item{Hacker}
 \item{Developer (read gardener)}
-\item{Mathematician}
 \item{Student}
 \item{\href{https://twitter.com/kennyballou}{@kennyballou}}
 \item{\href{https://github.com}{github/kennyballou}}
@@ -131,10 +130,12 @@ Using Erlang/OTP, we can:
 
 \begin{frame}
 \frametitle{Deployment Elsewhere}
+\framesubtitle{Related Technologies and Approaches}
 \begin{itemize}
 \item{Kubernetes\cite{website:kubernetes}}
 \item{``Rolling'' Releases}
 \item{Blue/Green\cite{website:bluegreendeployment_fowler}}
+\item{AWS Elastic Container Service\cite{website:ecs}}
 \end{itemize}
 \end{frame}
 
@@ -153,7 +154,39 @@ Using Erlang/OTP, we can:
 
 \begin{frame}
 \frametitle{Hot Loading Code}
-\Huge{Demo}
+\framesubtitle{Example Code}
+\lstinputlisting[firstline=14,lastline=30]{../demo/1/kv.ex}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hot Loading Code}
+  \framesubtitle{Erlang Functions}
+  \lstinputlisting{../demo/1/io/kv.1.out}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hot Loading Code}
+  \framesubtitle{Example Patchset}
+  \lstinputlisting[%
+  firstline=15,lastline=25]{../demo/1/patches/01-logging-kv.patch}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hot Loading Code}
+  \framesubtitle{Erlang Functions}
+  \lstinputlisting{../demo/1/io/kv.2.out}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hot Loading Code}
+  \framesubtitle{Erlang Functions}
+  \lstinputlisting{../demo/1/io/kv.3.out}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hot Loading Code}
+  \framesubtitle{Erlang Functions}
+  \lstinputlisting{../demo/1/io/kv.4.out}
 \end{frame}
 
 \begin{frame}
@@ -168,7 +201,8 @@ Using Erlang/OTP, we can:
 
 \begin{frame}
 \frametitle{Hot Loading Code}
-\Huge{DEMO}
+\framesubtitle{Using IEx Helpers}
+\lstinputlisting{../demo/1/io/iex.kv.1.out}
 \end{frame}
 
 \section{Relups}
